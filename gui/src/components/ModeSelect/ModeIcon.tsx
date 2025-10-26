@@ -1,8 +1,4 @@
-import {
-  ChatBubbleLeftIcon,
-  SparklesIcon,
-  SwatchIcon,
-} from "@heroicons/react/24/outline";
+import { SparklesIcon, SwatchIcon } from "@heroicons/react/24/outline";
 import { MessageModes } from "core";
 
 interface ModeIconProps {
@@ -19,7 +15,7 @@ export function ModeIcon({
       return <SparklesIcon className={className} />;
     case "plan":
       return <SwatchIcon className={className} />;
-    case "chat":
-      return <ChatBubbleLeftIcon className={className} />;
+    default:
+      return <SparklesIcon className={className} />;
   }
 }
